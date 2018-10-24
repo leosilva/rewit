@@ -4,47 +4,53 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>
-        <g:layoutTitle default="Grails"/>
+        <g:layoutTitle default="Rewit!"/>
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
 
-    <asset:stylesheet src="application.css"/>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS File -->
+    <asset:stylesheet src="bootstrap.min.css" />
+
+    <!-- Libraries CSS Files -->
+    <asset:stylesheet src="font-awesome/css/font-awesome.min.css" />
+    <asset:stylesheet src="animate.min.css" />
+    <asset:stylesheet src="ionicons/css/ionicons.min.css" />
+    <asset:stylesheet src="owl.carousel.min.css" />
+    <asset:stylesheet src="magnific-popup.css" />
+
+    <!-- Main Stylesheet File -->
+    <asset:stylesheet src="style.css" />
 
     <g:layoutHead/>
 </head>
 <body>
 
-    <div class="navbar navbar-default navbar-static-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/#">
-		    <asset:image src="grails.svg" alt="Grails Logo"/>
-                </a>
-            </div>
-            <div class="navbar-collapse collapse" aria-expanded="false" style="height: 0.8px;">
-                <ul class="nav navbar-nav navbar-right">
-                    <g:pageProperty name="page.nav" />
-                </ul>
-            </div>
-        </div>
-    </div>
+    <g:render template="/templates/header" />
 
     <g:layoutBody/>
 
-    <div class="footer" role="contentinfo"></div>
+    <!-- JavaScript Libraries -->
+    <asset:javascript src="jquery.min.js" />
+    <asset:javascript src="jquery-migrate.min.js" />
+    <asset:javascript src="bootstrap.bundle.min.js" />
+    <asset:javascript src="easing.min.js" />
+    <asset:javascript src="hoverIntent.js" />
+    <asset:javascript src="superfish.min.js" />
+    <asset:javascript src="wow.min.js" />
+    <asset:javascript src="owl.carousel.min.js" />
+    <asset:javascript src="magnific-popup.min.js" />
+    <asset:javascript src="sticky.js" />
+    <!-- Uncomment below if you want to use dynamic Google Maps -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD8HeI8o-c1NppZA-92oYlXakhDPYR7XMY"></script> -->
 
-    <div id="spinner" class="spinner" style="display:none;">
-        <g:message code="spinner.alt" default="Loading&hellip;"/>
-    </div>
+    <!-- Template Main Javascript File -->
+    <asset:javascript src="main.js" />
 
-    <asset:javascript src="application.js"/>
+    <asset:deferredScripts/>
 
 </body>
 </html>

@@ -3,10 +3,10 @@ package rewit
 class User {
 
     String username
-    String password
 
-    static hasMany = [followers : User, following: User, rewits: Rewit]
+    static hasMany = [rewits: Rewit]
 
     static constraints = {
+        username(nullable: false, blank: false)
     }
 }
