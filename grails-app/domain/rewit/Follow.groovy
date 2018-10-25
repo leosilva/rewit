@@ -6,5 +6,7 @@ class Follow {
     User following
 
     static constraints = {
+        followed(nullable: false)
+        following(nullable: false)
     }
 }
