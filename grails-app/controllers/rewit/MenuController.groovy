@@ -51,12 +51,10 @@ class MenuController {
      * @return
      */
     def listFollowers() {
-        /* recupera, da classe de serviço, todos os seguidores
-         * do usuário da sessão */
-        def followers = followService.listFollowers(session.user)
-        /* na GSP, a variável para acessar a lista 'followers' se chama
-         * followList */
-        respond followers, view: '/followed/list', model: [active: 'followers']
+        /*
+         * Implemente aqui o código da questão 2. Considere consultar outras
+         * ações neste controlador.
+         */
     }
 
     def listFollowing() {

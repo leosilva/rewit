@@ -12,14 +12,14 @@
 <section id="about">
     <div class="container">
         <div class="section-header">
-            <h2><g:message code="about.label"/></h2>
+            <h2><!-- Aqui deve estar o título da página--></h2>
         </div>
 
         <div class="row">
             <div class="col-lg-12">
                 <div class="box wow pb-3 pt-3">
                     <div class="icon"><i class="fa fa-info"></i></div>
-                    <p class="description"><g:message code="rewit.about.message" /></p>
+                    <p class="description"><!-- Aqui deve estar a descrição da página--></p>
                     <p></p>
                 </div>
             </div>

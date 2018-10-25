@@ -20,12 +20,8 @@
         </div>
 
         <div class="row">
-            <!-- Lista não ordenada que exibe o username dos usuários -->
-            <ul>
-                <g:each in="${followList}">
-                    <li>${it.following.username}</li>
-                </g:each>
-            </ul>
+            <!-- Escreva aqui a lista não ordenada que exibe
+             o username dos usuários -->
         </div>
     </div>
 </section><!-- #followed -->
