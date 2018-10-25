@@ -21,7 +21,7 @@
 
         <div class="row">
             <!-- Escreva aqui a lista não ordenada que exibe
-             o username dos usuários -->
+             o username dos usuários (questão 2) -->
         </div>
     </div>
 </section><!-- #followed -->

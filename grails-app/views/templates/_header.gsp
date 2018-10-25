@@ -64,7 +64,8 @@
                 -->
                 <li class="${active == 'about' ? 'menu-active': ''}">
                     <g:link controller="menu" action="about">
-                        <g:message code="about.label" />
+                        <!--<g:message code="about.label" />-->
+                        Sobre
                     </g:link>
                 </li>
                 <!-- Se o parâmetro 'active' for igual a 'login',

@@ -53,7 +53,7 @@ class MenuController {
     def listFollowers() {
         /*
          * Implemente aqui o código da questão 2. Considere consultar outras
-         * ações neste controlador.
+         * ações neste controlador para usar como base.
          */
     }
 
