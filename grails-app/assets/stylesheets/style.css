@@ -1486,3 +1486,11 @@ body.mobile-nav-active #mobile-nav-toggle {
   outline: none;
   text-decoration: none;
 }
+
+.errormessage {
+    color: red;
+    border: 1px solid red;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+}

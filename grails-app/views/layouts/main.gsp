@@ -31,6 +31,13 @@
 
     <g:render template="/templates/header" />
 
+    <!-- Componente para exibir as mensagens de erro -->
+    <g:if test="${flash.message && flash.error}">
+        <div id="errorContainer" class="container mt-4">
+            <div class="errormessage">${flash.message}</div>
+        </div>
+    </g:if>
+
     <g:layoutBody/>
 
     <!-- JavaScript Libraries -->

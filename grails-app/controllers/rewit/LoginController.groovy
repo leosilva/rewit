@@ -11,9 +11,19 @@ class LoginController {
      */
     def doLogin() {
         def user = User.findByUsername(params.username)
-        // adicionando um usuario na sessao
-        session.user = user
-        redirect(controller: 'menu', action: 'timeline')
+        if (user) {
+            // adicionando um usuario na sessao
+            session.user = user
+            // redirecionando para a página inicial
+            redirect(controller: 'menu', action: 'timeline')
+        } else {
+            // adicionando mensagem de erro
+            flash.message = g.message(code: 'login.error.message')
+            flash.error = true
+            // renderizando novamente a view de login.
+            render view: '/login', model: [active: 'login']
+        }
+
     }
 
     /**
@@ -28,6 +38,7 @@ class LoginController {
             // invalidando a sessao
             session.invalidate()
         }
+        // redirecionando para a página inicial
         redirect(controller: 'menu', action: 'timeline')
     }
 }
