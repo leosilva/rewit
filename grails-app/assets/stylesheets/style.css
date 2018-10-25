@@ -601,7 +601,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 #about .box {
   padding: 40px;
   /*margin-bottom: 40px;*/
-  box-shadow: 0px 0px 30px rgba(73, 78, 92, 0.15);
+  box-shadow: 10px 10px 15px rgba(73, 78, 92, 0.1);
   background: #fff;
   /*transition: 0.4s;*/
   min-height: 100px;
@@ -1202,6 +1202,127 @@ body.mobile-nav-active #mobile-nav-toggle {
 #rewit .form button[type="submit"]:hover {
   background: #2dc899;
 }
+
+/* Login Section
+--------------------------------*/
+#login {
+    padding: 30px 0;
+}
+
+#login .contact-info {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#login .contact-info i {
+    font-size: 48px;
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #50d8af;
+}
+
+#login .contact-info address, #login .contact-info p {
+    margin-bottom: 0;
+    color: #000;
+}
+
+#login .contact-info h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #999;
+}
+
+#login .contact-info a {
+    color: #000;
+}
+
+#login .contact-info a:hover {
+    color: #50d8af;
+}
+
+#login .contact-address, #login .contact-phone, #login .contact-email {
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    #login .contact-address, #login .contact-phone, #login .contact-email {
+        padding: 20px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    #login .contact-phone {
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+    }
+}
+
+#login #google-map {
+    height: 290px;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+    #login #google-map {
+        margin-top: 20px;
+    }
+}
+
+#login .form #sendmessage {
+    color: #50d8af;
+    border: 1px solid #50d8af;
+    display: none;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#login .form #errormessage {
+    color: red;
+    display: none;
+    border: 1px solid red;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+#login .form #sendmessage.show, #login .form #errormessage.show, #login .form .show {
+    display: block;
+}
+
+#login .form .validation {
+    color: red;
+    display: none;
+    margin: 0 0 20px;
+    font-weight: 400;
+    font-size: 13px;
+}
+
+#login .form input, #login .form textarea {
+    padding: 10px 14px;
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 15px;
+}
+
+#login .form button[type="submit"] {
+    background: #50d8af;
+    border: 0;
+    border-radius: 3px;
+    padding: 10px 30px;
+    color: #fff;
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#login .form button[type="submit"]:hover {
+    background: #2dc899;
+}
+
 
 /* Follow Section
 --------------------------------*/

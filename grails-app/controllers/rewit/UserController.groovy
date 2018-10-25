@@ -3,6 +3,9 @@ package rewit
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
+/**
+ * Controlador padrão para a classe User. Serve para consultar o código.
+ */
 class UserController {
 
     UserService userService
