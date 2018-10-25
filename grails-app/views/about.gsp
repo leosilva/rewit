@@ -17,7 +17,7 @@
 
         <div class="row">
             <div class="col-lg-12">
-                <div class="box wow">
+                <div class="box wow pb-3 pt-3">
                     <div class="icon"><i class="fa fa-info"></i></div>
                     <p class="description"><g:message code="rewit.about.message" /></p>
                     <p></p>
