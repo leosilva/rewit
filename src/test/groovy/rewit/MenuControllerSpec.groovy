@@ -3,7 +3,7 @@ package rewit
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
-class TimelineControllerSpec extends Specification implements ControllerUnitTest<TimelineController> {
+class MenuControllerSpec extends Specification implements ControllerUnitTest<MenuController> {
 
     def setup() {
     }

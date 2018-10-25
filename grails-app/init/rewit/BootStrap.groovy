@@ -32,11 +32,11 @@ class BootStrap {
         r8.save()
         r9.save()
 
-        def f1 = new Follow(follower: user1, following: user2)
-        def f2 = new Follow(follower: user1, following: user3)
-        def f3 = new Follow(follower: user2, following: user3)
-        def f4 = new Follow(follower: user3, following: user2)
-        def f5 = new Follow(follower: user3, following: user1)
+        def f1 = new Follow(followed: user1, following: user2)
+        def f2 = new Follow(followed: user1, following: user3)
+        def f3 = new Follow(followed: user2, following: user3)
+        def f4 = new Follow(followed: user3, following: user2)
+        def f5 = new Follow(followed: user3, following: user1)
 
         f1.save()
         f2.save()

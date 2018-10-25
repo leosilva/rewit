@@ -3,7 +3,7 @@ package rewit
 import grails.testing.web.controllers.ControllerUnitTest
 import spock.lang.Specification
 
-class FollowerControllerSpec extends Specification implements ControllerUnitTest<FollowerController> {
+class FollowControllerSpec extends Specification implements ControllerUnitTest<FollowController> {
 
     def setup() {
     }

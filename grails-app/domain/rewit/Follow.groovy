@@ -2,7 +2,7 @@ package rewit
 
 class Follow {
 
-    User follower
+    User followed
     User following
 
     static constraints = {

@@ -9,15 +9,6 @@ class RewitController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
-    def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
-        respond rewitService.list(params), model:[rewitCount: rewitService.count()]
-    }
-
-    def create() {
-        respond new Rewit(params)
-    }
-
     def save(Rewit rewit) {
         if (rewit == null) {
             notFound()
@@ -36,10 +27,17 @@ class RewitController {
         request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'rewit.label', default: 'Rewit'), rewit.id])
-                redirect(controller: 'timeline', action: 'index')
+                redirect(controller: 'menu', action: 'timeline')
             }
             '*' { respond rewit, [status: CREATED] }
         }
+    }
+
+    def replicate() {
+        def originalRewit = Rewit.get(params.rewitId)
+        def message = g.message(code: 'rewit.replicate.default.message', args: [originalRewit.user.username, originalRewit.message])
+        def rewit = new Rewit(message: message)
+        save(rewit)
     }
 
     protected void notFound() {

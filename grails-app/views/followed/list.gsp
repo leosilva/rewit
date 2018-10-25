@@ -7,23 +7,23 @@
 <body>
 
 <!--==========================
-          Follow List Section
+          Followed List Section
         ============================-->
-<section id="rewit" class="wow fadeInUp">
+<section id="follow" class="wow">
     <div class="container">
         <div class="section-header">
-            <h2><g:message code="followers.title.label" /></h2>
+            <h2><g:message code="followers.label" /></h2>
         </div>
 
         <div class="row">
             <ul>
-                <g:each in="${followers}">
+                <g:each in="${followList}">
                     <li>${it.following.username}</li>
                 </g:each>
             </ul>
         </div>
     </div>
-</section><!-- #follower -->
+</section><!-- #followed -->
 
 </body>
 </html>

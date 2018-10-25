@@ -6,7 +6,7 @@
 
         <div id="logo" class="pull-left">
             <h1>
-                <g:link controller="timeline" action="index">Re<span>wit</span></g:link>
+                <g:link controller="menu" action="timeline">Re<span>wit</span></g:link>
             </h1>
             <!-- Uncomment below if you prefer to use an image logo -->
             <!-- <a href="#body"><img src="img/logo.png" alt="" title="" /></a>-->
@@ -14,35 +14,39 @@
 
         <nav id="nav-menu-container">
             <ul class="nav-menu">
-                <li class="menu-active">
-                    <g:link controller="timeline" action="index">
-                        <g:message code="menu.timeline.label"/>
+                <li class="${active == 'timeline' ? 'menu-active': ''}">
+                    <g:link controller="menu" action="timeline">
+                        <g:message code="timeline.label"/>
                     </g:link>
                 </li>
                 <g:if test="${session.user}">
-                    <li>
-                        <g:link controller="rewit" action="create">
+                    <li class="${active == 'rewit' ? 'menu-active': ''}">
+                        <g:link controller="menu" action="newRewit">
                             <g:message code="menu.rewit.label" />
                         </g:link>
                     </li>
-                    <li>
-                        <g:link controller="follower" action="list">
-                            <g:message code="menu.followers.label" />
+                    <li class="${active == 'followers' ? 'menu-active': ''}">
+                        <g:link controller="menu" action="listFollowers">
+                            <g:message code="followers.label" />
                         </g:link>
                     </li>
-                    <li>
-                        <a href="#portfolio"><g:message code="menu.following.label" /></a>
+                    <li class="${active == 'following' ? 'menu-active': ''}">
+                        <g:link controller="menu" action="listFollowing">
+                            <g:message code="following.label" />
+                        </g:link>
                     </li>
                 </g:if>
-                <li>
-                    <a href="#team"><g:message code="menu.about.label" /></a>
+                <li class="${active == 'about' ? 'menu-active': ''}">
+                    <g:link controller="menu" action="about">
+                        <g:message code="about.label" />
+                    </g:link>
                 </li>
-                <li>
+                <li class="${active == 'login' ? 'menu-active': ''}">
                     <g:if test="${session.user}">
-                        ${session.user.username} (<g:link controller="login" action="doLogout"><g:message code="menu.signout.label" /></g:link>)
+                        ${session.user.username} (<g:link controller="login" action="doLogout" class="pl-0 pr-0"><g:message code="menu.signout.label" /></g:link>)
                     </g:if>
                     <g:else>
-                        <g:link controller="login" action="login">
+                        <g:link controller="menu" action="login">
                             <g:message code="menu.signin.label" />
                         </g:link>
                     </g:else>

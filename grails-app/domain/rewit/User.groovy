@@ -7,6 +7,6 @@ class User {
     static hasMany = [rewits: Rewit]
 
     static constraints = {
-        username(nullable: false, blank: false)
+        username(nullable: false, blank: false, unique: true)
     }
 }

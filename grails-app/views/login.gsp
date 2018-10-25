@@ -6,7 +6,7 @@
 </head>
 <body>
 
-    <section id="rewit" class="wow fadeInUp">
+    <section id="rewit" class="wow">
         <div class="container">
             <div class="section-header">
                 <h2><g:message code="login.title.label" /></h2>
