@@ -15,10 +15,31 @@ class RewitController {
      * @return
      */
     def save(Rewit rewit) {
-        /*
-         * Implemente aqui a ação de salvar um rewit no banco de dados (questão 3).
-         * Consule outros códigos para se basear, como o UserController.
-         */
+        if (rewit == null) {
+            notFound()
+            return
+        }
+
+        try {
+            /* Como um rewit é escrito por um usuário,
+             * é necessário adicionar o usuario da sessao
+             * como autor.
+             */
+            rewit.user = session.user
+            // salva no banco de dados
+            rewitService.save(rewit)
+        } catch (ValidationException e) {
+            respond rewit.errors, view:'create'
+            return
+        }
+
+        request.withFormat {
+            form multipartForm {
+                flash.message = message(code: 'default.created.message', args: [message(code: 'rewit.label', default: 'Rewit'), rewit.id])
+                redirect(controller: 'menu', action: 'timeline')
+            }
+            '*' { respond rewit, [status: CREATED] }
+        }
     }
 
     /**
