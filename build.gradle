@@ -54,6 +54,7 @@ dependencies {
     profile "org.grails.profiles:web"
     runtime "org.glassfish.web:el-impl:2.1.2-b03"
     runtime "com.h2database:h2"
+    runtime "mysql:mysql-connector-java:5.1.36"
     runtime "org.apache.tomcat:tomcat-jdbc"
     runtime "com.bertramlabs.plugins:asset-pipeline-grails:2.14.6"
     testCompile "org.grails:grails-gorm-testing-support"
@@ -85,3 +86,37 @@ assets {
     minifyJs = true
     minifyCss = true
 }
+
+// para alterar o nome padrao de geracao do arquivo WAR.
+war.archiveName="${war.baseName}.war"
+
+
+/*
+    TRECHO ADICIONADO PARA O DEPLOY NO HEROKU
+ */
+
+task wrapper(type: Wrapper) {
+    gradleVersion = gradleWrapperVersion
+}
+
+task stage(){
+    dependsOn clean, war
+}
+
+tasks.stage.doLast() {
+    delete fileTree(dir: "build/distributions")
+    delete fileTree(dir: "build/assetCompile")
+    delete fileTree(dir: "build/distributions")
+    delete fileTree(dir: "build/libs", exclude: "*.war")
+}
+war.mustRunAfter clean
+
+task copyToLib(type: Copy) {
+    into "$buildDir/server"
+    from(configurations.compile) {
+        include "webapp-runner*"
+    }
+}
+
+stage.dependsOn(copyToLib)
+
