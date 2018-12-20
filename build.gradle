@@ -64,6 +64,9 @@ dependencies {
     testRuntime "org.seleniumhq.selenium:selenium-firefox-driver:3.6.0"
     testRuntime "org.seleniumhq.selenium:selenium-remote-driver:3.6.0"
     testRuntime "org.seleniumhq.selenium:selenium-api:3.6.0"
+    // JAR PARA O HEROKU
+    compile 'org.eclipse.jetty:jetty-runner:9.2.11.v20150529'
+    compile 'com.github.jsimone:webapp-runner:8.0.30.2'
 }
 
 bootRun {
