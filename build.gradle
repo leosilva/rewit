@@ -34,7 +34,7 @@ dependencies {
     compile "org.springframework.boot:spring-boot-autoconfigure"
     compile "org.grails:grails-core"
     compile "org.springframework.boot:spring-boot-starter-actuator"
-    // ALTERAR LIB ABAIXO DE "COMPILE" PARA "PROVIDED"
+    // ALTERAR LIB ABAIXO DE "COMPILE" PARA "PROVIDED" PARA O HEROKU
     provided "org.springframework.boot:spring-boot-starter-tomcat"
     compile "org.grails:grails-web-boot"
     compile "org.grails:grails-logging"

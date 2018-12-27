@@ -112,8 +112,8 @@ environments:
         dataSource:
             dbCreate: create
             driverClassName: com.mysql.jdbc.Driver
-            username: gt4y6oanma9ymcy5
-            password: bamahgauozuuloua
+            username:
+            password:
             url: jdbc:mysql://enqhzd10cxh7hv2e.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/q7icnjew7zs5ymxl
             properties:
                 jmxEnabled: true
